@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Memento Mori</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="particles"></div>
+
+    <div class="container">
+
+        <h1>MEMENTO MORI</h1>
+
+        <p class="subtitle">
+            Remember that you must die.
+        </p>
+
+        <div class="card">
+
+            <h2>Your Life Calendar</h2>
+
+            <label>Date of Birth</label>
+            <input type="date" id="dob">
+
+            <label>Expected Lifespan</label>
+            <input type="number" id="lifespan" value="80">
+
+            <button onclick="calculateLife()">
+                Reveal My Time
+            </button>
+
+        </div>
+
+        <div id="results" class="results hidden">
+
+            <h2 id="message"></h2>
+
+            <div class="stats">
+
+                <div class="stat-card">
+                    <h3>Days Lived</h3>
+                    <p id="daysLived"></p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Days Remaining</h3>
+                    <p id="daysRemaining"></p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Life Progress</h3>
+                    <p id="lifeProgress"></p>
+                </div>
+
+            </div>
+
+            <div class="progress-container">
+                <div id="progressBar"></div>
+            </div>
+
+            <div id="calendar"></div>
+
+            <div class="life-card" id="lifeCard">
+
+                <h2>MEMENTO MORI</h2>
+
+                <div class="life-number" id="cardProgress">
+                    0%
+                </div>
+
+                <p>Life Progress</p>
+
+                <div class="card-stats">
+
+                    <div>
+                        <h4>Days Lived</h4>
+                        <p id="cardLived">0</p>
+                    </div>
+
+                    <div>
+                        <h4>Days Remaining</h4>
+                        <p id="cardRemaining">0</p>
+                    </div>
+
+                </div>
+
+                <div class="card-quote" id="cardQuote">
+                    Every moment is borrowed.
+                </div>
+
+            </div>
+
+            <div class="download-section">
+
+                <button onclick="downloadCard()">
+                    Download Life Card
+                </button>
+
+            </div>
+
+            <div class="quote-box">
+                <p id="quote"></p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
